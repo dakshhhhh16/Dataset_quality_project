@@ -1,3 +1,15 @@
+Your project is NOT about:
+
+Building the best cancer model
+
+Beating benchmarks
+
+Optimizing hyperparameters
+
+Your project IS about:
+
+Proving that data quality controls model behavior more than model choice
+
 A basic ml model pipeline
 Load data
 ↓
