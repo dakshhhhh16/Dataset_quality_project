@@ -1,3 +1,5 @@
+# “How does performance degrade as missing data increases?”
+
 import numpy as np
 import matplotlib.pyplot as plt
 
