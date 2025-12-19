@@ -1,80 +1,95 @@
-Your project is NOT about:
+# Dataset Quality Project - Key Learnings
 
-Building the best cancer model
+## 🎯 Project Focus
 
-Beating benchmarks
+### Your project is **NOT** about:
+- ❌ Building the best cancer model
+- ❌ Beating benchmarks
+- ❌ Optimizing hyperparameters
 
-Optimizing hyperparameters
+### Your project **IS** about:
+- ✅ **Proving that data quality controls model behavior more than model choice**
 
-Your project IS about:
+---
 
-Proving that data quality controls model behavior more than model choice
+## 📊 Basic ML Model Pipeline
 
-A basic ml model pipeline
+```
 Load data
-↓
+    ↓
 Modify / clean data
-↓
+    ↓
 Split data
-↓
+    ↓
 Fit model
-↓
+    ↓
 Predict
-↓
+    ↓
 Evaluate
+```
 
+---
 
-🧠 First: What is “class imbalance” (in pure English)?
+## 🧠 Understanding Class Imbalance
 
-Imagine this situation:
+### What is "class imbalance"?  (in plain English)
 
-You have 100 patients
+Imagine this situation: 
 
-95 are healthy
+- You have **100 patients**
+  - 95 are healthy
+  - 5 have cancer
 
-5 have cancer
+A very dumb model can say: 
+> *"Everyone is healthy"*
 
-A very dumb model can say:
+**Result:**
+- ✅ It will be **95% accurate**
+- ❌ But it **misses all cancer cases**
 
-“Everyone is healthy”
+**That's class imbalance.**
 
-It will be 95% accurate
-…but it misses all cancer cases
+#### The Problem: 
+- 👉 Accuracy looks good
+- 👉 Model is actually bad
 
-That’s class imbalance.
+---
 
-👉 Accuracy looks good
-👉 Model is actually bad
+## 🔬 What We Are Going to Study
 
-🎯 What we are going to study
+### Experimental Approach:
 
-We will:
+1. **Start** with balanced data
+2. **Slowly remove** samples of one class
+3. **Retrain** the same model
+4. **Observe** the following metrics:
+   - Accuracy
+   - **Recall** *(very important here)*
 
-Start with balanced data
+---
 
-Slowly remove samples of one class
+## 📈 Understanding Metrics
 
-Retrain the same model
+### 🔹 What is Recall? 
 
-Observe:
+**Recall answers this question:**
+> *"Out of all ACTUAL positive cases, how many did the model correctly catch?"*
 
-Accuracy
+#### Why Recall Matters in Medical Problems: 
 
-Recall (very important here)
+| Metric | Importance |
+|--------|------------|
+| **Recall** | 🔴 **Critical** - Missing a disease is worse than a false alarm |
+| Accuracy | ⚪ Can be misleading with imbalanced data |
 
-🧠 New Metric (explained before code)
-🔹 What is Recall?
+#### Simple Definition: 
 
-Recall answers this question:
+> **Recall = "How many important cases did we catch?"**
 
-“Out of all ACTUAL positive cases, how many did the model correctly catch?”
+💡 *You don't need formulas. Just remember this concept! *
 
-In medical problems:
+---
 
-Recall matters more than accuracy
+## 📝 Summary
 
-Missing a disease is worse than a false alarm
-
-You don’t need formulas. Just remember:
-
-Recall = “How many important cases did we catch?”
+This project demonstrates how **data quality** (specifically class balance) directly impacts model performance - regardless of which algorithm you choose.  By systematically reducing samples from one class, we can observe how metrics like recall deteriorate, proving that **data quality > model complexity**. 
