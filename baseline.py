@@ -15,12 +15,12 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # 3. Train model
 model = LogisticRegression(max_iter=5000)
-model.fit(X_train, y_train)
+model.fit(X_train, y_train) #Look at the training data and learn from it.
 
 # 4. Make predictions
-y_pred = model.predict(X_test)
+y_pred = model.predict(X_test) #Use what you learned to make guesses on new data.
 
 # 5. Check accuracy
-accuracy = accuracy_score(y_test, y_pred)
+accuracy = accuracy_score(y_test, y_pred) #Out of 100 predictions, how many were correct?
 print("Baseline Accuracy:", accuracy)
 
