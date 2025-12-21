@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, recall_score
 
 # ---------------------------------------------------
-# STEP 1: Load datasett
+# STEP 1: Load datasettt
 # ---------------------------------------------------
 
 data = load_breast_cancer()
