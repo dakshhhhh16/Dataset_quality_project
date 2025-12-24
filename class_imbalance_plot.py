@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, recall_score
 
 data = load_breast_cancer()
 X = data.data
-y = data.target
+y = data.target  
 
 # ---------------------------------------------------
 # STEP 2: Define imbalance levels
