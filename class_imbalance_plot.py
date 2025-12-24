@@ -20,7 +20,7 @@ y = data.target
 # Percentage of minority class we keep  
 imbalance_levels = [1.0, 0.7, 0.4, 0.2]
 
-accuracies = []
+accuracies = []  
 recalls = []
 
 # ---------------------------------------------------
