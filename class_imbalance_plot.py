@@ -16,7 +16,7 @@ y = data.target
 # ---------------------------------------------------
 # STEP 2: Define imbalance levels
 # ---------------------------------------------------
-
+  
 # Percentage of minority class we keep  
 imbalance_levels = [1.0, 0.7, 0.4, 0.2]
 
