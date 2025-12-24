@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score, recall_score
 # STEP 1: Load dataset
 # ---------------------------------------------------
 
-data = load_breast_cancer()
+data = load_breast_cancer()  
 X = data.data
 y = data.target  
 
