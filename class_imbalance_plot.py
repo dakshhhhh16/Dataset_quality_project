@@ -38,7 +38,7 @@ for level in imbalance_levels:
 
     # Randomly choose minority samples
     selected_class_1 = np.random.choice(
-        class_1_idx, n_keep, replace=False
+        class_1_idx, n_keep, replace=False  
     )
 
     # Combine majority and reduced minority
